@@ -1,0 +1,2 @@
+# rust-ing
+Learning Rust
