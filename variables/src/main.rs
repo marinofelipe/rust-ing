@@ -24,12 +24,12 @@ fn shadowing() {
     let spaces = "   ";
     let spaces = spaces.len();
 
-    // of course mutating a type is not possible, given that Rust is a statically typed language
+    // of course changing the type in the fly is not possible, given that Rust is a statically typed language
     let mut spaces = "   ";
     // spaces = spaces.len(); // error[E0308]: mismatched types
 }
 
-fn scalarTypes() {
+fn scalar_types() {
     // signed and unsigned integers
     let x: i8 = 1; // -128 -> +127
     let x: i16 = 1;
@@ -48,7 +48,7 @@ fn scalarTypes() {
     let y: f32 = 3.0; // f32 - single precision
 }
 
-fn numericOperations() {
+fn numeric_operations() {
     // remainder
     let remainder = 43 % 5;
 }
@@ -61,9 +61,9 @@ fn tuples() {
     println!("The value of y is: {}", y);
 
     // accessing by the index also works - as in Swift
-    let five_hundred = x.0;
-    let six_point_four = x.1;
-    let one = x.2;
+    let five_hundred = x;
+    let six_point_four = y;
+    let one = z;
 }
 
 fn arrays() {
