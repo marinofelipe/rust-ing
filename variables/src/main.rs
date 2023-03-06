@@ -15,45 +15,45 @@ fn main() {
 fn shadowing() {
     let x = 5;
     let x = x + 1;
-    let x = x * 2;
+    let _x = x * 2;
     let x = 3;
     println!("The value of x is: {}", x);
 
     // shadowing with different type
 
     let spaces = "   ";
-    let spaces = spaces.len();
+    let _spaces = spaces.len();
 
     // of course changing the type in the fly is not possible, given that Rust is a statically typed language
-    let mut spaces = "   ";
+    let mut _spaces = "   ";
     // spaces = spaces.len(); // error[E0308]: mismatched types
 }
 
-fn scalar_types() {
+fn _scalar_types() {
     // signed and unsigned integers
-    let x: i8 = 1; // -128 -> +127
-    let x: i16 = 1;
-    let x: i32 = 1;
-    let x: i64 = 1;
-    let x: i128 = 1;
+    let _x: i8 = 1; // -128 -> +127
+    let _x: i16 = 1;
+    let _x: i32 = 1;
+    let _x: i64 = 1;
+    let _x: i128 = 1;
 
-    let x: u8 = 1; // 0 -> 255
-    let x: u16 = 1;
-    let x: u32 = 1;
-    let x: u64 = 1;
-    let x: u128 = 1;
+    let _x: u8 = 1; // 0 -> 255
+    let _x: u16 = 1;
+    let _x: u32 = 1;
+    let _x: u64 = 1;
+    let _x: u128 = 1;
 
     // float
-    let x = 2.0; // f64 - double precision - aka double
-    let y: f32 = 3.0; // f32 - single precision
+    let _x = 2.0; // f64 - double precision - aka double
+    let _y: f32 = 3.0; // f32 - single precision
 }
 
-fn numeric_operations() {
+fn _numeric_operations() {
     // remainder
-    let remainder = 43 % 5;
+    let _remainder = 43 % 5;
 }
 
-fn tuples() {
+fn _tuples() {
     let tup: (i32, f64, u8) = (500, 6.4, 1);
 
     // pattern matching - destructuring the tuple
@@ -61,18 +61,18 @@ fn tuples() {
     println!("The value of y is: {}", y);
 
     // accessing by the index also works - as in Swift
-    let five_hundred = x;
-    let six_point_four = y;
-    let one = z;
+    let _five_hundred = x;
+    let _six_point_four = y;
+    let _one = z;
 }
 
-fn arrays() {
-    let a = [1, 2, 3, 4, 5];
+fn _arrays() {
+    let _a = [1, 2, 3, 4, 5];
 
     // different from vectors - that can grow in size
     // arrays are generally used in cases where the data is static
     // e.g. - months
-    let months = [
+    let _months = [
         "January",
         "February",
         "March",
@@ -84,12 +84,12 @@ fn arrays() {
         "September",
         "October",
         "November",
-        "December"
+        "December",
     ];
 
     // can also be declared with a shorthand that takes a value to repeat (3 in this case)
     // and the size of the array (5)
-    let a = [3; 5]; // let a = [3, 3, 3, 3, 3]
+    let _a = [3; 5]; // let a = [3, 3, 3, 3, 3]
 
     // Nice things with e.g. accessing a invalid index of array is that
     // Rust is more safe than other low level languages,

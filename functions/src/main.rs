@@ -19,7 +19,7 @@ fn another_function(x: i32, y: i32) {
     println!("The value of y is: {}", y);
 }
 
-fn five() -> i32 {
+fn _five() -> i32 {
     // 5; statements don’t evaluate to a value.
     5
 }
