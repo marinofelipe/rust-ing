@@ -1,0 +1,1 @@
+/Users/marino.felipe/Documents/projects/personal/rust/rust-ing/structs/rectangles/target/debug/rectangles: /Users/marino.felipe/Documents/projects/personal/rust/rust-ing/structs/rectangles/src/main.rs
