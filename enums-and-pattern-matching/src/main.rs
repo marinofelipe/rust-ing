@@ -31,6 +31,7 @@ fn route(ip_kind: IpAddrKind) {
 }
 
 fn store_values_in_struct() {
+    #[allow(dead_code)]
     struct IpAddr {
         kind: IpAddrKind,
         address: String,
@@ -68,6 +69,7 @@ enum IpAddr2 {
     V6(String),
 }
 
+#[allow(unused_variables)]
 fn with_different_associated_values_per_case() {
     let home = IpAddr2::V4(127, 0, 0, 1);
 
@@ -95,6 +97,7 @@ fn with_different_associated_values_per_case() {
 // With embedded types in it
 // which becomes associated and type nested to the enum (as a namespace)
 
+#[allow(dead_code)]
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -104,12 +107,19 @@ enum Message {
 
 // the following structs could hold the same data
 
+#[allow(dead_code)]
 struct QuitMessage; // unit struct
+
+#[allow(dead_code)]
 struct MoveMessage {
     x: i32,
     y: i32,
 }
+
+#[allow(dead_code)]
 struct WriteMessage(String); // tuple struct
+
+#[allow(dead_code)]
 struct ChangeColorMessage(i32, i32, i32); // tuple struct
 
 // But if we used the different structs, each of which has its own type,
@@ -137,6 +147,7 @@ fn enum_method() {
 // very similar to Swift, it's also an enum
 // that hold a generic type
 
+#[allow(unused_variables)]
 fn option_examples() {
     let some_number = Some(5);
     let some_char = Some('e');

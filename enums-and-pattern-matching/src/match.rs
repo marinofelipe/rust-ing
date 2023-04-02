@@ -1,6 +1,7 @@
 // 6.2 - The Rust Book
 // https://doc.rust-lang.org/book/ch06-02-match.html
 
+#[allow(dead_code)]
 fn main() {
     match_bind_to_values();
     match_control_flow();
@@ -10,10 +11,12 @@ fn main() {
     catch_all_example_3();
 }
 
+#[allow(dead_code)]
 pub fn match_control_flow() {
     println!("bla");
 }
 
+#[allow(dead_code)]
 pub enum Coin {
     Penny,
     Nickel,
@@ -44,6 +47,7 @@ fn _value_in_cents2(coin: Coin) -> u8 {
 
 // Patterns that bind to values
 
+#[allow(dead_code, unreachable_patterns)]
 pub fn match_bind_to_values() {
     #[derive(Debug)] // so we can inspect the state in a minute
     enum UsState {
@@ -87,12 +91,14 @@ pub fn match_bind_to_values() {
 // Match with Option<T>
 // https://doc.rust-lang.org/book/ch06-02-match.html#matching-with-optiont
 
+#[allow(dead_code, unused_variables)]
 fn using_option_with_match() {
     let five = Some(5);
     let six = plus_one(five);
     let none = plus_one(None);
 }
 
+#[allow(dead_code)]
 fn plus_one(x: Option<i32>) -> Option<i32> {
     match x {
         None => None,
@@ -101,6 +107,7 @@ fn plus_one(x: Option<i32>) -> Option<i32> {
 }
 
 // bind values
+#[allow(unused_variables)]
 fn catch_all_example() {
     let dice_roll = 9;
 
