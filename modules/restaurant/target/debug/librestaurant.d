@@ -1,0 +1,1 @@
+/Users/marino.felipe/Documents/projects/personal/rust/rust-ing/modules/restaurant/target/debug/librestaurant.rlib: /Users/marino.felipe/Documents/projects/personal/rust/rust-ing/modules/restaurant/src/front_of_house.rs /Users/marino.felipe/Documents/projects/personal/rust/rust-ing/modules/restaurant/src/lib.rs
