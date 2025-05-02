@@ -1,7 +1,6 @@
-use std::io;
-use std::cmp::Ordering;
 use rand::Rng;
 use std::io::empty;
+use std::{cmp::Ordering, io};
 
 fn main() {
     let secret_number = rand::thread_rng().gen_range(1..101); // 1..=100
@@ -36,7 +35,9 @@ fn ask_for_guess() -> Result<u32, io::Empty> {
 
     let guess: u32 = match guess
         .trim() // trim out any leading and trailing whitespaces that the user may have added + the \n that gets added
-        .parse() { // transform into the target type via inference + handle error
+        .parse()
+    {
+        // transform into the target type via inference + handle error
         Ok(num) => num,
         // TODO: Should find a better way to convert from ParseIntError -> io:Error.
         // Tried a custom From<> impl but without success. Let's see how it goes later!
@@ -55,6 +56,6 @@ fn show_result(ordering: &Ordering) {
     match ordering {
         Ordering::Less => println!("\nToo small!"),
         Ordering::Greater => println!("\nToo big!"),
-        Ordering::Equal => println!("\nNice job! You won!")
+        Ordering::Equal => println!("\nNice job! You won!"),
     }
 }
