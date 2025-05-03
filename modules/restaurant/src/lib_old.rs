@@ -200,8 +200,7 @@ pub fn eat_at_restaurant_5() {
 // use std::io::{self, Write};
 
 // Instead of
-// use std::io;
-// use std::io::Write;
+// use std::io::{self, Write};
 
 // The Glob Operator
 
