@@ -12,4 +12,5 @@ members = [
   "ownership",
   "structs",
   "variables",
+  "generic_traits_lifetimes",
 ]
