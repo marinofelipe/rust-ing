@@ -66,3 +66,20 @@ fn indexing() {
     let s1 = String::from("hello");
     // let h = s1[0]; // error[E0277]: the type `str` cannot be indexed by `{integer}`
 }
+
+fn slicing() {
+    let hello = "Здравствуйте";
+    let s = &hello[0..4]; // Зд, because each of those characters are 2 bytes long
+
+    // &hello[0..1] would panic the program in runtime because it's part of a single character
+}
+
+fn iterating() {
+  for c in "Зд".chars() {
+      println!("{c}");
+  }
+
+  for b in "Зд".bytes() {
+      println!("{b}");
+  }
+}

@@ -1,0 +1,15 @@
+[workspace]
+members = [
+  "collections",
+  "control-flow",
+  "dependencies",
+  "enums-and-pattern-matching",
+  "error_handling",
+  "functions",
+  "guessing-game",
+  "hello-world",
+  "modules",
+  "ownership",
+  "structs",
+  "variables",
+]

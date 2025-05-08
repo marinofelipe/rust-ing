@@ -1,3 +1,6 @@
+#![allow(unused)]
+#![allow(dead_code)]
+
 mod r#match;
 use crate::r#match::match_bind_to_values;
 
